@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="stylesxd.css">
+    <script src="controllers/CRUDshop.js"></script>
+    <script src="controllers/ClientShopjs.js"></script>
+    <script src="https://kit.fontawesome.com/ca299fedd4.js" crossorigin="anonymous"></script>
+
+
+    <div
+    
+    class="modal fade"
+    id="modalId1"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+>
+    <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+        role="document"
+    >
+        <div class="modal-content" style="color: black;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    <b>Iniciar Sesión </b>
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <p>Correo</p>
+                <form > 
+                    <div class="input-group mb-3">
+                    <input id="mail" type="text" class="form-control" placeholder="Ingresa tu Correo">
+                    <span class="input-group-text"> 
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                  </div>
+                </form>
+                <p>Contraseña</p>
+                <form > 
+                    <div class="input-group mb-3">
+                    <input id="paswd" type="password" class="form-control" placeholder="Ingresa tu Contraseña">
+                    <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                  </div>
+                </form>
+
+                <input type="checkbox" name="recordar1" id="recordar1"> Recordar <br>
+                <p class="center_text">
+                    <button
+                    type="submit"
+                    class="btn btn-primary " 
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    >
+                    Login
+                </button>
+                </p>
+                
+            </div>
+            <div class="modal-footer">
+                <p style="font-size: small; margin: auto;">¿No tienes una cuenta? 
+                    <a data-bs-target="#modalId2" data-bs-toggle="modal"
+                    href="#">Registrate Aqui</a>
+
+                    <!-- 
+                        <a data-target="#myModal" data-toggle="modal" 
+                        class="MainNavText" id="MainNavHelp" 
+       href="#myModal">HELP</a> 
+
+       data-bs-toggle="modal"
+    data-bs-target="#modalId2"
+    -->
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal 2, este representa cuando te registras -->
+<div
+    class="modal fade"
+    id="modalId2"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+>
+    <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+        role="document"
+    >
+        <div class="modal-content" style="color: black;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    Registrarse
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div  class="col-6" >
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Name"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-6" >
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Apellidos"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-12" >
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Tu correo"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-12" >
+                            <div class="mb-3">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Contraseña"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-12" >
+                            <div class="mb-3">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Confirmar Contraseña"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Aqui termina row -->
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" 
+                data-bs-dismiss="modal"
+                    aria-label="Close"
+                >Registrarse</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</head>
+<body style="background-color: rgb(28,27,34); color: white;">
+    <!-- navbar -->
+    <div>
+        <nav class="navbar navbar-expand-sm navbar-dark color1 onTop">
+            <a href="home.html">
+                <img src="https://marketplace.canva.com/EAFu-AvzJa4/4/0/1600w/canva-blue-modern-technology-%26-gaming-logo-bb9pWtw0dRE.jpg" 
+            alt="logo" style="width: 50px; margin-left: 10px;">
+            </a>
+            <!-- borre algo aqui de la nav bar, ya veremos que pedo
+            segun yo no era nada asi que importara -->
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <!-- elements in the nav -->
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" aria-current="page"
+                            >Inicio <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item" style="padding-top: 2px;">
+                        <!-- 2comments -->
+                        <div class="dropdown open ">
+                            <a
+                                class="btn color1 dropdown-toggle"
+                                type="button"
+                                id="triggerId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                Productos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <a class="dropdown-item" href="home.html">Categoria A</a>
+                                <a class="dropdown-item" href="home.html">Categoria B</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- 2comments -->
+                    </li>
+                    <li class="nav-item">
+                        <form class="d-flex my-2 my-lg-0">
+                            <input
+                                class="form-control me-sm-2"
+                                type="text"
+                                placeholder="Search product"
+
+                            />
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </li>
+
+                </ul>
+
+
+               <form class="d-flex" style="padding-top: 10px; padding-right: 10px;">
+                    <button
+                        type="button"
+                        class="btn color1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalId1"
+                    >
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    
+               </form>
+                <a href="shopping_cart.html">
+                    <button class="color1" style="padding-top: 10px;">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" style="margin-top: 10px;">
+        <div class="row">
+            <div id="aqui_metemos_todo" class="col-8 color2">
+                <div class="d-flex">
+                    <div class="flex-grow-1 ms-3">
+                        <h5 class="mt-0">Mejillones
+                            <a
+                                name="delete_button_mejillones"
+                                id="delete_button_mejillones"
+                                class="btn btn-danger"
+                                href="#"
+                                role="button"
+                                ><i class="fa-solid fa-trash-can"></i></a
+                            >
+                            
+                        </h5>
+                    
+                        <!-- We are gonna do a subgrid cause its easier -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12">
+                                    <form > 
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">Cantidad:</span>
+                                            <input disabled id="cantidad1" type="number" min="1" class="form-control" placeholder="Ingresa cantidad">
+                                            <button  id="replaceButton" type="button" class="btn btn-primary">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+
+                                        </div>
+                                    </form>
+                                    <form > 
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">Precio:</i></span>
+                                            <input id="precio1" type="number" min="0" class="form-control" placeholder="Ingresa cantidad" disabled>
+                                            <span class="input-group-text">MXN:</i></span>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+
+
+
+                                <div class="col-md-4 col-sm-12">
+                                    <p class="center_text"> 
+                                        <img src="https://media.istockphoto.com/id/916156000/photo/food.webp?s=612x612&w=0&k=20&c=r19uEhLyAEYP8uj4FOnTeTNEHJd-c7th4K2pesZV_8E="
+                                     alt="mejillon" width="200px" >
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+
+
+                        
+                        <!-- We are gonna do a subgrid cause its easier -->
+                        
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="d-flex">
+                    <div class="flex-shrink-0">
+                        <img src="#" alt="" width="10" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h5 class="mt-0">ummmm sushi
+                            <a
+                                name="delete_original_sushi"
+                                id="delete_original_sushi"
+                                class="btn btn-danger"
+                                href="#"
+                                role="button"
+                                ><i class="fa-solid fa-trash-can"></i></a
+                            >
+                            
+                        </h5>
+                    
+                        <!-- We are gonna do a subgrid cause its easier -->
+                        <div class="container">
+                            <div class="row">
+                                <div
+                                    class="col-md-8 col-sm-12"
+                                >
+                                    <form > 
+                                        <div class="input-group mb-3">
+                                        <span class="input-group-text">Cantidad:</i></span>
+                                        <input id="cantidad1" type="number" min="0" class="form-control" placeholder="Ingresa cantidad">
+                                    </div>
+                                    </form>
+                                    <form > 
+                                        <div class="input-group mb-3">
+                                        <span class="input-group-text">Precio:</i></span>
+                                        <input disabled id="precio1" type="number" min="0" class="form-control" placeholder="Ingresa cantidad">
+                                        <span class="input-group-text">MXN:</i></span>
+                                    </div>
+                                    </form>
+                                    </div>
+
+                                    <div
+                                    class="col-md-4 col-sm-12"
+                                >
+                                    <p class="center_text"> 
+                                        <img src="https://images.freeimages.com/images/large-previews/f6c/japanese-food-1327418.jpg"
+                                     alt="sushi" width="100px" >
+
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- We are gonna do a subgrid cause its easier -->
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-1" >
+                <!-- Aqui no hay nada  -->
+            </div>
+            <div class="col-3 color1" >
+                <!--  -->
+                <h1>Total Compra:</h1>
+                <div id="TotalCompraTexto">
+                    <p id="textooooo">
+                        
+                    </p>
+                </div>
+                <p class="center_text">
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="margin-bottom: 5px;"
+                >
+                    Pagar
+                </button> <br>
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                >
+                    Cancelar
+                </button>
+                
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+
+</body>
+</html>

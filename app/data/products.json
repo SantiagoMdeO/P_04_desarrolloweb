@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "uuid": "1",
+      "title": "mejillones",
+      "description": "tan buenisimos, una dulsura inolvidable",
+      "imageUrl": "https://media.istockphoto.com/id/916156000/photo/food.webp?s=612x612&w=0&k=20&c=r19uEhLyAEYP8uj4FOnTeTNEHJd-c7th4K2pesZV_8E=",
+      "unit": "pieces",
+      "stock": 50,
+      "pricePerUnit": 10.99,
+      "category": "Fish"
+    },
+    {
+      "uuid": "2",
+      "title": "ummmm sushi",
+      "description": "ching chang ching chun",
+      "imageUrl": "https://images.freeimages.com/images/large-previews/f6c/japanese-food-1327418.jpg",
+      "unit": "boxes",
+      "stock": 20,
+      "pricePerUnit": 25.49,
+      "category": "chinesse propaganda"
+    },
+    {
+      "uuid": "3",
+      "title": "ummmm sushi2.0",
+      "description": "ghong hogae uhm delcioso",
+      "imageUrl": "https://media.istockphoto.com/id/1249002643/es/foto/composici%C3%B3n-con-delicioso-nigiri-sushi-y-rollos.jpg?s=2048x2048&w=is&k=20&c=7-31sWKkXgHxgi8dtKbJGhUYmUDyXK6a25LKGdTQRks=",
+      "unit": "packs",
+      "stock": 100,
+      "pricePerUnit": 5.99,
+      "category": "Clothing for fish"
+    },
+    {
+      "uuid": "4",
+      "title": "ummmm sushi3.0",
+      "description": "this is actual formal speech, not racist conotations implied at all in the making of this website",
+      "imageUrl": "https://media.istockphoto.com/id/178997152/es/foto/sushi-en-un-plato.webp?s=2048x2048&w=is&k=20&c=xo38LSnNBgUsgvdgwmFYXNAhCdaZtAWKrf1kMmvwr3c=",
+      "unit": "sets",
+      "stock": 30,
+      "pricePerUnit": 15.79,
+      "category": "Korean propaganda, north"
+    },
+    {
+      "uuid": "5",
+      "title": "paellas",
+      "description": "no se ve tan rico pero lo juro que sabe diferente(estoy mintiendo)",
+      "imageUrl": "https://media.istockphoto.com/id/118920543/es/foto/placa-de-verdadero-valencian-paella.jpg?s=612x612&w=0&k=20&c=LU47fW60K269ZKpyo9Toq6hCrbCvuillrot8ouvTwyk=",
+      "unit": "packs",
+      "stock": 80,
+      "pricePerUnit": 7.99,
+      "category": "Food & Beverages & protection"
+    },
+    {
+      "uuid": "6",
+      "title": "arrozito",
+      "description": "estoy empezando a ver un trend respecto que platillos se estan vendiendo",
+      "imageUrl": "https://images.freeimages.com/images/large-previews/2a1/rice-1194546.jpg",
+      "unit": "packs",
+      "stock": 200,
+      "pricePerUnit": 7.99,
+      "category": "Food & Beverages"
+    },
+    {
+      "uuid": "7",
+      "title": "sandwhichis",
+      "description": "primera imagen que me encontre, ni se antoja",
+      "imageUrl": "https://media.istockphoto.com/id/1160073005/es/foto/hamburguesa-de-marisco-con-mayonesa-y-verduras-frescas.jpg?s=1024x1024&w=is&k=20&c=uvFRg1Caswu_lRyVycMwwLw9ISBQJmsLpHJrGSeRmuQ=",
+      "unit": "packs",
+      "stock": 15,
+      "pricePerUnit": 7.99,
+      "category": "Food & Beverages"
+    },
+    {
+      "uuid": "8",
+      "title": "sandwhichis2.0",
+      "description": "con debatiblemente mas azucar",
+      "imageUrl": "https://images.freeimages.com/images/large-previews/178/sandwich-biscuits-1327749.jpg",
+      "unit": "packs",
+      "stock": 20,
+      "pricePerUnit": 7.99,
+      "category": "Alien"
+    }
+  ]
+}

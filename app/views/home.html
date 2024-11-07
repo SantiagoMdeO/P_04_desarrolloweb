@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="stylesxd.css"> -->
+    <script src="https://kit.fontawesome.com/ca299fedd4.js" crossorigin="anonymous"></script>
+
+    <script src="/views/controllers/index.js"></script>
+    <script src="/views/controllers/CRUDshop.js"></script>
+    <script src="/views/controllers/ClientHomejs.js"></script>
+    
+
+    <link rel="stylesheet" href="stylesxd.css">
+
+    <!-- lienas comentadas para que no haya errores
+    309
+    300
+    lo de styles css
+    un texto opcional
+
+    -->
+
+<div
+    class="modal fade"
+    id="modalId1"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+>
+    <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+        role="document"
+    >
+        <div class="modal-content" style="color: black;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    <b>Iniciar Sesión </b>
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <p>Correo</p>
+                <form > 
+                    <div class="input-group mb-3">
+                    <input id="mail" type="text" class="form-control" placeholder="Ingresa tu Correo">
+                    <span class="input-group-text"> 
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                  </div>
+                </form>
+                <p>Contraseña</p>
+                <form > 
+                    <div class="input-group mb-3">
+                    <input id="paswd" type="password" class="form-control" placeholder="Ingresa tu Contraseña">
+                    <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                  </div>
+                </form>
+
+                <input type="checkbox" name="recordar1" id="recordar1"> Recordar <br>
+                <p class="center_text">
+                    <button
+                    type="submit"
+                    class="btn btn-primary " 
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    >
+                    Login
+                </button>
+                </p>
+                
+            </div>
+            <div class="modal-footer">
+                <p style="font-size: small; margin: auto;">¿No tienes una cuenta? 
+                    <a data-bs-target="#modalId2" data-bs-toggle="modal"
+                    href="#">Registrate Aqui</a>
+
+                    <!-- 
+                        <a data-target="#myModal" data-toggle="modal" 
+                        class="MainNavText" id="MainNavHelp" 
+       href="#myModal">HELP</a> 
+
+       data-bs-toggle="modal"
+    data-bs-target="#modalId2"
+    -->
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Modal 2, este representa cuando te registras -->
+<div
+    class="modal fade"
+    id="modalId2"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+>
+<div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+        role="document"
+    >
+        <div class="modal-content" style="color: black;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    Registrarse
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div  class="col-6" >
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Name"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-6" >
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Apellidos"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-12" >
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Tu correo"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-12" >
+                            <div class="mb-3">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Contraseña"
+                                />
+                            </div>
+                        </div>
+                        <div  class="col-12" >
+                            <div class="mb-3">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    aria-describedby="helpId"
+                                    placeholder="Confirmar Contraseña"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Aqui termina row -->
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" 
+                data-bs-dismiss="modal"
+                    aria-label="Close"
+                >Registrarse</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div
+    class="modal fade"
+    id="modalId3"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+>
+    <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+        role="document"
+    >
+        <div class="modal-content" style="color: black;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    <b>Escoge la cantidad a agregar</b>
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <input type="number" max="100" min="1" id="inputModal" style="width: 100%; height: 50px; border-radius: 6px;">
+            </div>
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                    
+                >
+                    Cancel
+                </button>
+                <button id="BotonAgregarCarrito" type="button" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body style="background-color: rgb(28,27,34); color: white;">
+    <!-- navbar -->
+    <div>
+        <nav class="navbar navbar-expand-sm navbar-dark color1">
+            <a href="#">
+                <img src="https://marketplace.canva.com/EAFu-AvzJa4/4/0/1600w/canva-blue-modern-technology-%26-gaming-logo-bb9pWtw0dRE.jpg" 
+            alt="logo" style="width: 50px; margin-left: 10px;">
+            </a>
+            <!-- borre algo aqui de la nav bar, ya veremos que pedo
+            segun yo no era nada asi que importara -->
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <!-- elements in the nav -->
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page"
+                            >Inicio <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item" style="padding-top: 2px;">
+                        <!-- 2comments -->
+                        <div class="dropdown open ">
+                            <a
+                                class="btn color1 dropdown-toggle"
+                                type="button"
+                                id="triggerId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                Productos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <a class="dropdown-item" href="#">Categoria A</a>
+                                <a class="dropdown-item" href="#">Categoria B</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- 2comments -->
+                    </li>
+                    <li class="nav-item">
+                        <form class="d-flex my-2 my-lg-0">
+                            <input
+                                class="form-control me-sm-2"
+                                type="text"
+                                placeholder="Search product"
+
+                            />
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </li>
+
+                </ul>
+
+
+               <form class="d-flex" style="padding-top: 10px; padding-right: 10px;">
+                    <button
+                        type="button"
+                        class="btn color1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalId1"
+                    >
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    
+               </form>
+                
+                <button id="button_to_move_to_shopping_cart_that_is_useless_but_requirement" class="color1" style="padding-top: 10px;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                
+            </div>
+        </nav>
+    </div>
+    <!-- carousel -->
+<div id="carouselId" class="carousel slide container-md" 
+data-bs-ride="carousel" style="margin-bottom: 20px;">
+    <ol class="carousel-indicators">
+        <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="First slide"
+        ></li>
+        <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="1"
+            aria-label="Second slide"
+        ></li>
+        <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="2"
+            aria-label="Third slide"
+        ></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img
+                src="https://img.freepik.com/foto-gratis/surtido-plano-deliciosa-comida-brasilena_23-2148739179.jpg"
+                class="w-100 d-block"
+                alt="First slide"
+                style="max-height: 600px; max-width: 800px; margin: auto;"
+
+                
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="https://www.dzoom.org.es/wp-content/uploads/2019/04/fotografia-de-comida-platos7.jpg"
+                class="w-100 d-block"
+                alt="Second slide"
+                style="max-height: 600px; max-width: 800px; margin: auto;"
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="https://www.recetasnestle.com.mx/sites/default/files/2022-06/ingredientes-comida-de-mar-parrilla.jpg"
+                class="w-100 d-block"
+                alt="Third slide"
+                style="max-height: 600px; max-width: 800px; margin: auto;"
+            />
+        </div>
+    </div>
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselId"
+        data-bs-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselId"
+        data-bs-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- grid de cartas -->
+<div>
+    <div class="container-fluid" >
+        <div class="row" id="showing_all_products"> 
+           
+
+
+        </div>
+    </div>
+    
+</div>
+
+<nav aria-label="Page navigation" >
+    <ul   class="pagination justify-content-center" id="navigation">
+        
+        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+        
+        
+    </ul>
+</nav>
+
+<!-- <div>
+    <div class="container-fluid" >
+        <div class="row" id="testing"> 
+             <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                        <img class="card-img-top" 
+                        src="https://media.istockphoto.com/id/916156000/photo/food.webp?s=612x612&w=0&k=20&c=r19uEhLyAEYP8uj4FOnTeTNEHJd-c7th4K2pesZV_8E=" alt="Title"
+                        style="max-height: 325px;"
+                        />
+                    <div class="card-body">
+                        <h4 class="card-title">mejillones</h4>
+                        <p class="card-text">tan buenisimos, una dulsura inolvidable</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://images.freeimages.com/images/large-previews/f6c/japanese-food-1327418.jpg" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">ummmm sushi</h4>
+                        <p class="card-text">ching chang ching chun</p>
+                    </div>
+
+                    <button 
+                        type="button"
+                        class="btn btn-primary"
+                    >
+                        Agregar al carrito
+                    </button>
+                    
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://media.istockphoto.com/id/1249002643/es/foto/composici%C3%B3n-con-delicioso-nigiri-sushi-y-rollos.jpg?s=2048x2048&w=is&k=20&c=7-31sWKkXgHxgi8dtKbJGhUYmUDyXK6a25LKGdTQRks=" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">ummmm sushi2.0</h4>
+                        <p class="card-text">ghong hogae uhm delcioso</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://media.istockphoto.com/id/178997152/es/foto/sushi-en-un-plato.webp?s=2048x2048&w=is&k=20&c=xo38LSnNBgUsgvdgwmFYXNAhCdaZtAWKrf1kMmvwr3c=" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">ummmm sushi3.0</h4>
+                        <p class="card-text">this is actual formal speech, not racist conotations implied at all in the making of this website</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://media.istockphoto.com/id/118920543/es/foto/placa-de-verdadero-valencian-paella.jpg?s=612x612&w=0&k=20&c=LU47fW60K269ZKpyo9Toq6hCrbCvuillrot8ouvTwyk=" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">paellas</h4>
+                        <p class="card-text">no se ve tan rico pero lo juro que sabe diferente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://images.freeimages.com/images/large-previews/2a1/rice-1194546.jpg" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">arrozito</h4>
+                        <p class="card-text">estoy empezando a ver un trend respecto que platillos se estan vendiendo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://media.istockphoto.com/id/1160073005/es/foto/hamburguesa-de-marisco-con-mayonesa-y-verduras-frescas.jpg?s=1024x1024&w=is&k=20&c=uvFRg1Caswu_lRyVycMwwLw9ISBQJmsLpHJrGSeRmuQ=" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">sandwhichis</h4>
+                        <p class="card-text">primera imagen que me encontre, ni se antoja</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" >
+                <div class="card color1">
+                    <img class="card-img-top" src="https://images.freeimages.com/images/large-previews/178/sandwich-biscuits-1327749.jpg" alt="Title" 
+                    style="max-height: 325px;"/>
+                    <div class="card-body">
+                        <h4 class="card-title">sandwhichis2.0</h4>
+                        <p class="card-text">con debatiblemente mas azucar</p>
+                    </div>
+                </div>
+            </div>
+            
+
+           
+
+
+
+        </div>
+    </div>
+    
+</div> -->
+
+
+</body>
+</html>
